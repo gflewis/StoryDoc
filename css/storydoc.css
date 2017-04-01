@@ -11,36 +11,52 @@ td {
   border-width: 1px;	
 }
 
+article.story {
+  background-color: palegreen;	
+}
+
 div.form {
-	background-color: #f5e6ff;
+	background-color: green;
 }
 div.clear {
 	clear: left;
 }
-/* 
-Two column layout 
-*/
+/*** 
+***  Two column layout 
+***/
+
+div.row-2col {
+	border: 5px solid olivedrab;
+}
 
 /* col 1 label */
-div.labl-2-1 {
+
+div.row-2col div.labl-1 {
 	float: left;
-	width: 20%;
-	background-color: #9900ff;
+	width: 100px;
+	padding: 5px;
+	background-color: indigo;
 	color: white;
 }
-/* col 1 data */
-div.data-2-1 {
+
+div.row-2col div.data-1 {
 	float: left;
-	width: 30%;
+	width: 150px;
+  padding: 5px;
 	background-color: #f5e6ff;
 }
-/* col 2 label */
-div.labl-2-2 {
-	float: left;
-	width: 20%;
+
+div.row-2col div.labl-2 {
+	float: right;
+	width: 100px;
+  padding: 5px;
+  background-color: indigo;
+  color: white;
 }
-/* col 2 data */
-div.data-2-2 {
-	float: left;
-	width: 30%;
+
+div.row-2col div.data-2 {
+	float: right;
+	width: 150px;
+	padding: 5px;
+  background-color: #f5e6ff;
 }
