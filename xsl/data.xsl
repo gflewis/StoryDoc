@@ -18,6 +18,12 @@
       <xsl:element name="status">
         <xsl:value-of select="state/display_value"/>
       </xsl:element>
+      <xsl:element name="priority">
+        <xsl:value-of select="priority/display_value"/>
+      </xsl:element>
+      <xsl:element name="estimate">
+        <xsl:value-of select="u_estimated_hours/display_value"/>
+      </xsl:element>
       <xsl:element name="short_description">
         <xsl:value-of select="short_description/value"/>
       </xsl:element>
