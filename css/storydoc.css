@@ -6,7 +6,7 @@
 
 @media print {
   
-  article.story {
+  article {
     page-break-inside: avoid; 
   }
 
@@ -28,7 +28,7 @@
 
 /* colors are based on #993399 */
 
-article.story {
+article {
   font-family: "Lucida Sans Unicode","Lucida Sans","Lucida Grande",Arial,sans-serif; 
   margin-bottom: 54px;
 }
@@ -99,3 +99,11 @@ tr.row-1col td.data {
   width: 85%;
 }
 
+footer {
+  font-family: "Lucida Sans Unicode","Lucida Sans","Lucida Grande",Arial,sans-serif; 	
+}
+
+footer div.legal {
+	font-size: 8pt;
+	font-style: italic;
+}

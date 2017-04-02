@@ -8,19 +8,41 @@
       <link rel="stylesheet" type="text/css" href="../css/storydoc.css" />
     </head>
     <body id="content">
-      <!--
-       This only works in Firefox, sort of, 
-       and it does not work in Chrome at all, so it was removed for now
-	    <div id="page-footer">
-	      Copyright 2017 Aptris - all rights reserved - Page  
-	    </div>
-	     -->
+	    <article class="release">
+	      <table class="form">
+          <tr class="title">
+            <td class="title" colspan="5"><xsl:value-of select="short_description"/></td>
+          </tr>
+	        <tr class="row-2col">
+	          <th class="labl">Release</th>
+	          <td class="data"><xsl:value-of select="number" /></td>
+	          <td class="gully" />
+            <th class="labl">Status</th>
+            <td class="data"><xsl:value-of select="status" /></td>
+	        </tr>
+	        <tr class="row-2col">
+            <th class="labl">Aptris Contact</th>
+            <td class="data"><xsl:value-of select="assigned_to"/></td>
+            <td class="gully"/>
+            <th class="labl">Customer Contact</th>
+            <td class="data"><xsl:value-of select="contact"/></td>
+	        </tr>	        
+	      </table>
+	    </article>
       <xsl:apply-templates select="story" />
+      <footer>
+	      <div class="copyright">Copyright 2017 Aptris - A Ticomix Company.</div>
+	      <div class="legal">
+          This document is the property of Aptris - A Ticomix Company.
+          This document contains confidential information and is intended for use only 
+          by the named customer contact. 
+          This document may not be redistributed without permission from Aptris - A Ticomix Company.
+	      </div>
+      </footer>
     </body>
-  </html>
-  
+  </html>  
   </xsl:template>
-  
+
   <xsl:template match="story">
     <article class="story">
       <table class="form">
