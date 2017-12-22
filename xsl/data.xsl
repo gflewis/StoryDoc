@@ -5,7 +5,7 @@
   <xsl:param name="release" />
   <xsl:param name="releasedatafile" />
   <xsl:variable name="releasedoc" select="document($releasedatafile)" />
-  
+
   <xsl:template match="/response">
     <xsl:element name="release">
       <xsl:attribute name="release">
@@ -13,16 +13,16 @@
       </xsl:attribute>
       <xsl:attribute name="releasedatafile">
         <xsl:value-of select="$releasedatafile" />
-      </xsl:attribute>      
+      </xsl:attribute>
       <xsl:call-template name="release">
         <xsl:with-param name="release" select="$releasedoc/response/result" />
-      </xsl:call-template>      
+      </xsl:call-template>
       <xsl:apply-templates select="result">
         <xsl:sort select="number/value"/>
       </xsl:apply-templates>
     </xsl:element>
   </xsl:template>
-  
+
   <xsl:template name="release">
     <xsl:param name="release"/>
     <xsl:element name="number">
@@ -34,14 +34,8 @@
     <xsl:element name="short_description">
       <xsl:value-of select="$release/short_description/value"/>
     </xsl:element>
-    <xsl:element name="account">
-      <xsl:value-of select="$release/u_account/display_value" />
-    </xsl:element>
-    <xsl:element name="contract">
-      <xsl:value-of select="$release/u_contract/display_value" />
-    </xsl:element>
-    <xsl:element name="contact">
-      <xsl:value-of select="$release/u_contact/display_value" />
+    <xsl:element name="requested_by">
+      <xsl:value-of select="$release/u_requested_by/display_value" />
     </xsl:element>
     <xsl:element name="assigned_to">
       <xsl:value-of select="$release/assigned_to/display_value" />
@@ -60,7 +54,7 @@
         <xsl:value-of select="priority/display_value"/>
       </xsl:element>
       <xsl:element name="estimate">
-        <xsl:value-of select="u_estimated_hours/display_value"/>
+        <xsl:value-of select="u_complexity/display_value"/>
       </xsl:element>
       <xsl:element name="short_description">
         <xsl:value-of select="short_description/value"/>
