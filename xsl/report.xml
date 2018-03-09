@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report name="RLSE0010018" work="/Users/giles/workspace/StoryDoc/data/">
+  <extract tag="release" table="rm_release" query="number=RLSE0010018"
+    file="RLSE0010018.release.xml" />
+  <extract tag="story" table="rm_story" query="release.number=RLSE0010018"
+    file="RLSE0010018.story.xml" />
+</report>

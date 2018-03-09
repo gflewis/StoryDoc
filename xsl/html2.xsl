@@ -5,7 +5,7 @@
     version="2.0">
   <xsl:output method="xml" indent="yes" omit-xml-declaration="no"/>
 
-  <xsl:template match="/release">
+  <xsl:template match="/data/release">
   <html>
     <head>
       <style>
@@ -29,7 +29,7 @@
 	        </tr>
 	      </table>
 	    </article>
-      <xsl:apply-templates select="story" />
+      <xsl:apply-templates select="/data/story" />
       <footer>
       </footer>
     </body>
